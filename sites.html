@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع [اسمك هنا] للدعوة إلى الله</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* الخطوط الأساسية وتوجيه النص */
+        body {
+            font-family: 'Inter', sans-serif;
+            direction: rtl; /* لضمان اتجاه النص من اليمين لليسار */
+            text-align: right; /* محاذاة النص لليمين */
+            background-color: #f8fafc; /* لون خلفية فاتح جداً */
+            color: #334155; /* لون نص أساسي */
+            line-height: 1.7; /* تحسين تباعد الأسطر للقراءة */
+        }
+        /* الخطوط العربية التقليدية للعناوين والنصوص الطويلة */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Amiri', serif;
+        }
+        p, li, a {
+            font-family: 'Amiri', serif;
+        }
+
+        /* تخصيصات Tailwind إضافية لجمالية أفضل */
+        .btn {
+            @apply inline-block px-8 py-3 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white hover:bg-blue-700 shadow-xl hover:shadow-2xl;
+        }
+        .btn-secondary {
+            @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 shadow-lg;
+        }
+        .section-padding {
+            @apply py-20 md:py-32; /* مسافة داخلية أكبر للأقسام */
+        }
+        .card {
+            @apply bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1;
+        }
+        .form-input, .form-textarea {
+            @apply w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-200 transition duration-200;
+        }
+        .form-textarea {
+            @apply resize-y; /* السماح بتغيير حجم مربع النص عمودياً */
+        }
+        .section-divider {
+            @apply h-1 bg-gradient-to-r from-blue-500 to-blue-700 w-24 mx-auto my-12 rounded-full; /* فاصل زخرفي */
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, #2563eb, #1d4ed8); /* تدرج أزرق أعمق للخلفية الرئيسية */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="#home" class="text-3xl font-bold text-blue-700 mb-4 md:mb-0" aria-label="الرئيسية">
+                <span class="text-blue-500">العفيري</span> للدعوة <span class="text-amber-500">✨</span>
+            </a>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 md:space-x-reverse space-x-4 text-lg">
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">الرئيسية</a></li>
+                    <li><a href="#about-islam" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">عن الإسلام</a></li>
+                    <li><a href="#my-message" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">رسالتي</a></li>
+                    <li><a href="#resources" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">مصادر</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg text-white section-padding text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 46v-4h-2v4H0v2h2v4h2v-4h4v-2H6zm0-20v-4h-2v4H0v2h2v4h2v-4h4v-2H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+                "وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ"
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-4xl mx-auto opacity-90">
+                دعوة إلى طريق الحق والنور، لفهم الإسلام بجماله وشموليته، وبناء جسور التفاهم والمحبة.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 sm:space-x-reverse">
+                <a href="#about-islam" class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100" aria-label="اكتشف الإسلام">اكتشف الإسلام</a>
+                <a href="#contact" class="btn btn-secondary" aria-label="تواصل معنا">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-islam" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-blue-800">عن الإسلام</h2>
+            <div class="section-divider"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700 flex items-center justify-end">
+                        التوحيد <span class="mr-2 text-amber-500 text-3xl">🕋</span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        الإسلام دين التوحيد الخالص، يؤمن بإله واحد أحد لا شريك له، هو الله سبحانه وتعالى، خالق الكون ومدبره، وهو المستحق للعبادة وحده.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700 flex items-center justify-end">
+                        القرآن الكريم <span class="mr-2 text-amber-500 text-3xl">📖</span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        كتاب الله المنزل على النبي محمد صلى الله عليه وسلم، وهو كلام الله المعجز، هداية ونور للبشرية جمعاء، ودستور حياة للمسلمين.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-700 flex items-center justify-end">
+                        النبي محمد ﷺ <span class="mr-2 text-amber-500 text-3xl">🕌</span>
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        خاتم الأنبياء والمرسلين، أُرسل رحمة للعالمين، وقدوته وسنته هي السبيل لفهم وتطبيق تعاليم الإسلام، ومكارم الأخلاق.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="my-message" class="section-padding bg-blue-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-800">رسالتي إليك</h2>
+            <div class="section-divider"></div>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-12 mt-12">
+                <div class="lg:w-1/2">
+                    <img src="Abod.jpg"  class="rounded-xl shadow-2xl mx-auto mb-8 max-w-full h-auto transform hover:scale-105 transition duration-300">
+                </div>
+                <div class="lg:w-1/2 text-right">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        أهلاً بك في هذا الفضاء المتواضع الذي أسعى من خلاله لمشاركة نور الهداية. رسالتي هي دعوة صادقة للتأمل في عظمة الخالق، وجمال رسالة الإسلام التي تدعو إلى السلام، العدل، والرحمة في كل جوانب الحياة.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        أسعى من خلال هذا الموقع لمشاركة ما تعلمته عن هذا الدين العظيم، والإجابة على تساؤلاتك، وتقديم يد العون لكل من يبحث عن الحقيقة والطمأنينة. الإسلام ليس مجرد دين، بل هو منهج حياة شامل يضيء الدروب ويهدي القلوب إلى الخير والصلاح.
+                    </p>
+                    <p class="text-xl font-semibold text-blue-700 italic">
+                        "ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ" <span class="text-gray-500">(النحل: 125)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section-padding bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-blue-800">مصادر موثوقة</h2>
+            <div class="section-divider"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-700 flex items-center justify-end">
+                        القرآن الكريم <span class="mr-2 text-amber-500 text-3xl">✨</span>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        اكتشف معاني القرآن الكريم، وتدبر آياته العظيمة من خلال نصوص موثوقة وتفاسير معتمدة.
+                    </p>
+                    <a href="https://quran.com/" target="_blank" class="text-blue-600 hover:underline font-medium" aria-label="اقرأ القرآن">اقرأ القرآن الكريم &larr;</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-700 flex items-center justify-end">
+                        السنة النبوية <span class="mr-2 text-amber-500 text-3xl">📚</span>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        تعرف على سيرة النبي محمد صلى الله عليه وسلم وأحاديثه الشريفة التي تبين لنا منهج الحياة الإسلامي.
+                    </p>
+                    <a href="https://sunnah.com/" target="_blank" class="text-blue-600 hover:underline font-medium" aria-label="اكتشف السنة">اكتشف السنة النبوية &larr;</a>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-3 text-blue-700 flex items-center justify-end">
+                        مقالات إسلامية <span class="mr-2 text-amber-500 text-3xl">📝</span>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        مجموعة من المقالات والبحوث المعمقة التي تتناول جوانب مختلفة من العقيدة، الفقه، والأخلاق الإسلامية.
+                    </p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium" aria-label="المزيد من المقالات">المزيد من المقالات &larr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 text-blue-800">تواصل معنا</h2>
+            <div class="section-divider"></div>
+            <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl mt-12">
+                <p class="text-gray-700 mb-8 text-center text-lg">
+                    إذا كان لديك أي أسئلة، استفسارات، أو ترغب في التحدث عن الإسلام، فلا تتردد في ملء النموذج أدناه. يسعدني التواصل معك.
+                </p>
+                <form action="https://formspree.io/f/mldnejbr"" method="POST">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 text-lg font-bold mb-3">الاسم:</label>
+                        <input type="text" id="name" name="الاسم" class="form-input" placeholder="اسمك الكريم" required aria-label="أدخل اسمك">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 text-lg font-bold mb-3">البريد الإلكتروني:</label>
+                        <input type="email" id="email" name="_replyto" class="form-input" placeholder="بريدك الإلكتروني" required aria-label="أدخل بريدك الإلكتروني">
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 text-lg font-bold mb-3">رسالتك:</label>
+                        <textarea id="message" name="الرسالة" rows="6" class="form-textarea" placeholder="اكتب رسالتك هنا..." required aria-label="اكتب رسالتك"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" aria-label="إرسال الرسالة">إرسال الرسالة</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-6 text-lg">&copy; 2025 [اسمك هنا]. جميع الحقوق محفوظة.</p>
+            <div class="flex justify-center space-x-6 space-x-reverse">
+                <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="صفحتنا على فيسبوك">فيسبوك</a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="حسابنا على تويتر">تويتر</a>
+                <a href="#" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300" aria-label="حسابنا على انستغرام">انستغرام</a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500">
+                "اللهم اهدنا فيمن هديت، وعافنا فيمن عافيت، وتولنا فيمن توليت."
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
